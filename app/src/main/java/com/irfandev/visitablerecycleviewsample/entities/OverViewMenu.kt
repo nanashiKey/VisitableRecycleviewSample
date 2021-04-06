@@ -15,7 +15,7 @@ data class OverViewMenu(
     val profile : Menu
 ) : BaseItemModel(){
     override fun type(typeFactory: ItemTypeFactory): Int {
-        TODO("Not yet implemented")
+        return typeFactory.type(this)
     }
 
 }
