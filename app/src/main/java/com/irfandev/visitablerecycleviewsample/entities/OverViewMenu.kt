@@ -9,7 +9,7 @@ import com.irfandev.visitablerecycleviewsample.baseconfig.BaseItemModel
  *   email : assidiq.irfan@gmail.com
  **/
 data class OverViewMenu(
-    val scan : Menu,
+    val market : Menu,
     val pay : Menu,
     val history : Menu,
     val profile : Menu

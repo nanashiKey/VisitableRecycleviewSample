@@ -10,7 +10,7 @@ import com.irfandev.visitablerecycleviewsample.baseconfig.BaseItemModel
  **/
 data class BannerApps(val title : String, val description : String) : BaseItemModel(){
     override fun type(typeFactory: ItemTypeFactory): Int {
-        TODO("Not yet implemented")
+        return typeFactory.type(this)
     }
 
 }

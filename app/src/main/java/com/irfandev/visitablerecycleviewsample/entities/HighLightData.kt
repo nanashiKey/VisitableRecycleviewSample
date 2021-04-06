@@ -12,7 +12,7 @@ data class HighLightData(
     val items : List<HighLight> = listOf()
 ) : BaseItemModel(){
     override fun type(typeFactory: ItemTypeFactory): Int {
-        TODO("Not yet implemented")
+        return typeFactory.type(this)
     }
 
 }
