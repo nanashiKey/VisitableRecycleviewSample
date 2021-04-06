@@ -1,6 +1,9 @@
 package com.irfandev.visitablerecycleviewsample.viewholders
 
+import android.content.Intent
 import android.view.View
+import android.widget.Toast
+import com.irfandev.visitablerecycleviewsample.AfterActivity
 import com.irfandev.visitablerecycleviewsample.R
 import com.irfandev.visitablerecycleviewsample.baseconfig.AbstractViewHolder
 import com.irfandev.visitablerecycleviewsample.entities.Menu
@@ -18,6 +21,10 @@ class OverViewMenuViewHolder(view : View) : AbstractViewHolder<OverViewMenu>(vie
     private fun setbtnMarket(market : Menu){
         imgMarket.setImageResource(market.icon)
         tvTitleMarket.text = market.title
+        imgMarket.setOnClickListener{
+            Toast.makeText(itemView.context, "market item", Toast.LENGTH_SHORT).show()
+            itemView.context.startActivity(Intent(itemView.context, AfterActivity::class.java))
+        }
     }
 
     private val imgPay = view.imgPay
@@ -25,6 +32,9 @@ class OverViewMenuViewHolder(view : View) : AbstractViewHolder<OverViewMenu>(vie
     private fun setBtnPay(pay : Menu){
         imgPay.setImageResource(pay.icon)
         tvTitlePay.text = pay.title
+        imgPay.setOnClickListener {
+            Toast.makeText(itemView.context, "pay item", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private val imgHistory = view.imgHistory
@@ -32,6 +42,9 @@ class OverViewMenuViewHolder(view : View) : AbstractViewHolder<OverViewMenu>(vie
     private fun setBtnHistory(history : Menu){
         imgHistory.setImageResource(history.icon)
         tvTitleHistory.text = history.title
+        imgHistory.setOnClickListener {
+            Toast.makeText(itemView.context, "history item", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private val imgProfile = view.imgUser
@@ -39,6 +52,9 @@ class OverViewMenuViewHolder(view : View) : AbstractViewHolder<OverViewMenu>(vie
     private fun setBtnProfile(profile : Menu){
         imgProfile.setImageResource(profile.icon)
         tvTitleProfile.text = profile.title
+        imgProfile.setOnClickListener {
+            Toast.makeText(itemView.context, "profile item", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun bind(element: OverViewMenu) {
